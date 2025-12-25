@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f820dbb5aa.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        /* === ROOT === */
+        :root{
+            --color-main: white;
+            --bg-color-main: black;
+            --color-destaque: red;
+        }
+        /* === GLOBAL === */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--color-main);
+            background-color: var(--bg-color-main);
+        }
+
+        /* === FLEX GLOBAL === */
+        header,
+        .menu,
+        nav,
+        .header-column-3,
+        nav > ul,
+        main,
+        .secao-dois,
+        .secao-tres,
+        article,
+        .content-hour,
+        .anime-grid,
+        .filmes-grid{
+            display: flex;
+        }
+
+        /* === FLEX COLUMN GLOBAL === */
+        main,
+        .secao-dois,
+        .secao-tres,
+        article{
+            flex-direction: column;
+        }
+
+        /* === FLEX ROW GLOBAL === */
+        nav > ul,
+        .anime-grid,
+        .filmes-grid{
+            flex-direction: row;
+        }
+
+        /* === GAP GLOBAL === */
+        .header-column-3{
+            gap: 10px;
+        }
+
+        main{
+            gap: 20px;
+        }
+
+        article,
+        .secao-dois,
+        .secao-tres{
+            gap: 10px;
+        }
+
+        /* === TEXT GLOBAL === */
+        p{
+            font-size: 0.85em;
+        }
+
+        a{
+            text-decoration: none;
+            color: var(--color-main);
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        a:active{
+            color: blue;
+        }
+
+        .destaque{
+            background-color: var(--color-destaque);
+            color: var(--color-main);
+        }
+
+        /* === HEADER === */
+        header{
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            border: 1px solid var(--color-destaque);
+            border-top: none;
+            border-left: none; 
+            border-right: none;
+            z-index: 999;
+            padding: 20px;
+        }
+
+        header > h2{
+            color: var(--color-destaque);
+        }
+
+        .header-column-3{
+            align-items: center;
+        }
+
+        .header-column-3 > button,
+        .header-column-3 i{
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .header-column-3 > button{
+            border: 1px solid var(--color-destaque);
+            border-radius: 25px;
+        }
+
+        /* === MENU === */
+        .mainmenu{
+            font-size: 15px;
+            position: relative;
+        }
+
+        .mainmenu.seta::after{
+            content: "\f0d7";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-left: 6px;
+        }
+
+        .mainmenu:hover > .submenu{
+            display: block;
+            position: absolute;
+        }
+
+        .submenu{
+            display: none;
+            padding: 30px;
+            position: absolute; 
+            top: 110%;
+            background-color: var(--bg-color-main);
+            border: 1px solid var(--color-main);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px var(--color-main);
+            width: 200px;
+            font-size: 14px;
+        }
+
+        .submenu > li{
+            margin-bottom: 20px;
+        }
+
+        /* === NAV === */
+        nav{
+            justify-content: center;
+        }
+
+        nav li{
+            padding: 10px;
+        }
+
+        nav > ul,
+        li{
+            list-style: none;
+            gap: 20px;
+        }
+
+        /* === SECTIONS === */
+        .secao-um{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .secao-um p{
+            margin-top: 10px;
+        }
+
+        .secao-um .column-2{
+            display: grid; 
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        .secao-dois h2,
+        .secao-tres h2{
+            margin-left: 16px;
+        }
+
+        /* === ARTICLE === */
+        article{
+            padding: 20px;
+        }
+
+        article.destaques > img{
+            height: 350px;
+        }
+
+        article > img{
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        article:hover > img{
+            filter: brightness(1.05) saturate(0.8);
+        }
+
+        article:hover > h4,
+        article.destaques > h4{
+            text-decoration: underline;
+        }
+
+        article .content-hour{
+            margin-top: 20px;
+        }
+
+        /* === CONTENT CATEGORIES === */
+        .content-hour{
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .content.filme,
+        .content.anime,
+        .content.serie,
+        .content.animacao{
+            border-radius: 25px;
+            color: var(--color-main);
+            padding: 5px;
+            width: 80px;
+            text-align: center;
+        }
+
+        .content.filme{
+            background-color: #8B0000;
+        }
+        .content.anime{
+            background-color: #6A1B9A;
+        }
+        .content.serie{
+            background-color: #1E88E5;
+        }
+        .content.animacao{
+            background-color: #2E7D32;
+        }
+        @media (max-width: 900px){
+            main{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: center;
+            }
+            .secao-um p{
+                display: none;
+            }
+            .secao-um h2{
+                font-size: 16px;
+            }
+           .secao-um, .anime-grid, .filmes-grid{
+             display: grid;
+             grid-template-columns: repeat(1,1fr);
+           }
+            .secao-um .column-2{
+                display: grid; 
+                grid-template-columns: repeat(1,1fr);
+            }
+            article.destaques > img{
+                height: 180px;
+            }
+        }
+
+
+        /* === FOOTER === */
+footer{
+    background-color: var(--color-main);
+    color: var(--bg-color-main);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer a{
+    color: var(--bg-color-main);
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* === FOOTER BRAND === */
+.footer-brand{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-brand h2{
+    color: var(--color-destaque);
+}
+
+.footer-brand p{
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+/* === FOOTER LINKS === */
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+.footer-links h4{
+    font-size: 1em;
+    border-bottom: 1px solid var(--bg-color-main);
+    padding-bottom: 5px;
+}
+
+.footer-links ul{
+    list-style: none;
+}
+
+.footer-links li,
+.footer-container a{
+    padding: 10px;
+}
+
+.footer-links a:hover{
+    text-decoration: underline;
+}
+
+/* === FOOTER SOCIAL === */
+.footer-social{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-social h4{
+    font-size: 1em;
+    border-bottom: 1px solid var(--bg-color-main);
+    padding-bottom: 5px;
+}
+
+.social-icons{
+    display: flex;
+    gap: 15px;
+}
+
+.footer-container i{
+    font-size: 25px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-container i:hover{
+    transform: scale(1.1);
+    color: var(--color-destaque);
+}
+
+/* === FOOTER BOTTOM === */
+.footer-bottom{
+    border-top: 1px solid var(--bg-color-main);
+    padding-top: 15px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+
+         @media (max-width: 1200px){
+            nav{
+                display: none;
+            }
+            .footer-container{
+                display: none;
+            }
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Netinhafix</h2>
+        <nav>
+            <ul class="menu">
+                <li class="mainmenu"><a href="#">Início</a></li>
+                <li class="mainmenu seta">
+                <a href="#">Animações</a>
+                <ul class="submenu">
+                    <li><a href="#">Animes</a></li>
+                    <li><a href="#">Desenhos Animados</a></li>
+                    <li><a href="#">Filmes Animados</a></li>
+                    <li><a href="#">Estúdios</a></li>
+                </ul>
+                </li>
+                <li class="mainmenu seta">
+                <a href="#">Séries</a>
+                <ul class="submenu">
+                    <li><a href="#">TV</a></li>
+                    <li><a href="#">Streaming</a></li>
+                    <li><a href="#">Séries Animadas</a></li>
+                </ul>
+                </li>
+                <li class="mainmenu seta">
+                <a href="#">Filmes</a>
+                <ul class="submenu">
+                    <li><a href="#">Lançamentos</a></li>
+                    <li><a href="#">Clássicos</a></li>
+                    <li><a href="#">Críticas</a></li>
+                </ul>
+                </li>
+                <li class="mainmenu"><a href="#">Notícias</a></li>
+                <li class="mainmenu"><a href="#">Sobre</a></li>
+                <li class="mainmenu"><a href="#">Contato</a></li>
+            </ul  >
+        </nav>
+        <div class="header-column-3">
+            <i class="fa-solid fa-magnifying-glass" id="e"></i>
+            <button class="button destaque">Cadastrar</button>
+        </div>
+    </header>
+    <main>
+     <section class="secao-um">
+    <article class="destaques">
+        <img src="img/Jujutsu-Kaisen.jpg" alt="">
+        <h2>Jujutsu Kaisen se consolida como um dos animes mais populares da década</h2>
+        <p>
+            Com animação de alto nível, trilha sonora marcante e personagens carismáticos,
+            Jujutsu Kaisen conquistou fãs ao redor do mundo e se tornou referência entre
+            os animes modernos, influenciando a nova geração de produções do gênero shounen.
+        </p>
+        <div class="content-hour">
+            <span class="content anime">Anime</span>
+            <div class="clock">
+                <i class="fa-solid fa-clock"></i>
+                <span>12:20</span>
+            </div>
+        </div>
+    </article>
+
+    <div class="column-2">
+        <article>
+            <img src="img/onepiece.jpg" alt="">
+            <h4>One Piece entra em sua fase final e aumenta expectativas dos fãs</h4>
+            <div class="content-hour">
+                <span class="content anime">Anime</span>
+                <div class="clock">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>11:45</span>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="img/the-last-of-us.avif" alt="">
+            <h4>The Last of Us prova que adaptações de jogos podem dar certo</h4>
+            <div class="content-hour">
+                <span class="content serie">Série</span>
+                <div class="clock">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>10:30</span>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="img/marvel-spider-man.webp" alt="">
+            <h4>Homem-Aranha segue como um dos heróis mais populares do cinema</h4>
+            <div class="content-hour">
+                <span class="content filme">Filme</span>
+                <div class="clock">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>09:50</span>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="img/atack.jpg" alt="">
+            <h4>Attack on Titan encerra sua história como um marco dos animes</h4>
+            <div class="content-hour">
+                <span class="content anime">Anime</span>
+                <div class="clock">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>08:15</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="secao-dois">
+    <h2>Animes</h2>
+
+    <div class="anime-grid">
+        <article>
+            <img src="img/demon-slayer.webp" alt="Demon Slayer">
+            <h4>Demon Slayer se destaca pela animação e batalhas impressionantes</h4>
+            <div class="content-hour">
+                <span class="content anime">Anime</span>
+                <div class="clock">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>14:10</span>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="img/naruto_telinha.webp" alt="Naruto Shippuden">
+            <h4>Naruto Shippuden continua sendo referência entre os shounens</h4>
+            <div class="content-hour">
+                <span class="content anime">Anime</span>
+                <div class="clock">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>13:40</span>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="img/death-note.webp" alt="Death Note">
+            <h4>Death Note permanece como um dos animes psicológicos mais aclamados</h4>
+            <div class="content-hour">
+                <span class="content anime">Anime</span>
+                <div class="clock">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>12:55</span>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="img/Boku-no-Hero-Season-8.webp" alt="My Hero Academia">
+            <h4>My Hero Academia reforça a popularidade dos heróis no anime</h4>
+            <div class="content-hour">
+                <span class="content anime">Anime</span>
+                <div class="clock">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>11:30</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="secao-tres">
+    <h2>Filmes Populares</h2>
+
+    <div class="filmes-grid">
+        <article>
+            <img src="img/avengers.jpeg" alt="Vingadores: Ultimato">
+            <h4>Vingadores: Ultimato se torna um dos maiores sucessos da história do cinema</h4>
+            <div class="content-hour">
+                <span class="content filme">Filme</span>
+                <div class="clock">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>16:40</span>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="img/20221102-ovicio-avatar-caminho-agua-2.webp" alt="Avatar: O Caminho da Água">
+            <h4>Avatar: O Caminho da Água impressiona com efeitos visuais e bilheteria recorde</h4>
+            <div class="content-hour">
+                <span class="content filme">Filme</span>
+                <div class="clock">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>15:25</span>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="img/nowayhome.jpg" alt="Homem-Aranha: Sem Volta Para Casa">
+            <h4>Homem-Aranha: Sem Volta Para Casa reúne gerações e conquista fãs ao redor do mundo</h4>
+            <div class="content-hour">
+                <span class="content filme">Filme</span>
+                <div class="clock">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>14:10</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+    </main>
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h2>Netinhafix</h2>
+            <p>
+                Seu portal completo sobre animes, séries, filmes e animações.
+                Fique por dentro das novidades, lançamentos e clássicos do entretenimento.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Animes</a></li>
+                <li><a href="#">Séries</a></li>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="#">Notícias</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-links">
+            <h4>Categorias</h4>
+            <ul>
+                <li><a href="#">Animações</a></li>
+                <li><a href="#">Animes</a></li>
+                <li><a href="#">Desenhos Animados</a></li>
+                <li><a href="#">Filmes Animados</a></li>
+                <li><a href="#">Estúdios</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <h4>Redes Sociais</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Netinhafix. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>

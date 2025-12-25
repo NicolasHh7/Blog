@@ -1,0 +1,123 @@
+    <main>
+        <section class="oi">
+            <article>
+                <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" width="100%" alt="Jujutsu kaisen">
+                <h2>Jujutsu Kaisen se consolida como um dos animes mais populares da década</h2>
+                <p>Com animação de alto nível e personagens carismáticos, Jujutsu Kaisen conquistou fãs ao redor do mundo. A obra se destaca pelas lutas intensas, trilha sonora marcante e um enredo que mistura ação, drama e terror sobrenatural.</p>
+                <div class="detalhe">
+                    <span class="anime">Anime</span>
+                    <span>10:45</span>
+                </div>
+            </article>
+            <div class="subcontent">
+                <article>
+                    <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" alt="">
+                    <h2>Stranger Things prova que nostalgia ainda funciona muito bem</h2>
+                    <div class="detalhe">
+                        <span class="serie">Série</span>
+                        <span>12:20</span>
+                    </div>
+                </article>
+                <article>
+                    <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" alt="">
+                    <h2>Estúdio Ghibli continua encantando gerações</h2>
+                    <div class="detalhe" >
+                        <span class="animacao">Animação</span>
+                        <span>18:40</span>
+                    </div>
+                </article>
+                <article>
+                    <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" alt="">
+                    <h2>Attack on Titan entrega um dos finais mais comentados dos animes</h2>
+                    <div class="detalhe">
+                        <span class="anime">Anime</span>
+                        <span>20:05</span>
+                    </div>
+                </article>
+                <article>
+                    <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" alt="">
+                    <h2>The Last of Us mostra como adaptar jogos para a TV</h2>
+                    <div class="detalhe">
+                        <span class="serie">Série</span>
+                        <span>22:15</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="a" >
+            <h2>Featured Stories</h2>
+            <div class="oi1">
+                 <article>
+                <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" alt="">
+                <h2>Aranhaverso redefine o que esperamos de filmes animados</h2>
+                <div class="detalhe">
+                    <span class="filme">Filme</span>
+                    <span>09:30</span>
+                </div>
+                </article>
+
+                <article>
+                <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" alt="">
+                <h2>Demon Slayer mantém o padrão de animação impressionante</h2>
+                <div class="detalhe">
+                    <span class="anime">Anime</span>
+                    <span>11:50</span>
+                </div>
+                </article>
+
+                <article>
+                <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" alt="">
+                <h2>Breaking Bad continua sendo referência em narrativa televisiva</h2>
+                <div class="detalhe">
+                    <span class="serie">Série</span>
+                    <span>16:10</span>
+                </div>
+                </article>
+
+                <article>
+                <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" alt="">
+                <h2>Toy Story prova que boas histórias nunca envelhecem</h2>
+                <div class="detalhe">
+                    <span class="animacao">Animação</span>
+                    <span>19:45</span>
+                </div>
+                </article>
+            </div>
+            
+        </section>
+
+
+        <section>
+            <h2>Holiday gift ideas</h2>
+            <div class="oi2">
+         <article>
+                <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" alt="">
+                <h2>One Piece mostra por que ainda é um dos maiores animes da história</h2>
+                <div class="detalhe">
+                <span class="anime">Anime</span>
+                <span>08:15</span>
+                </div>
+            </article>
+
+            <article>
+                <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" alt="">
+                <h2>Interestelar segue impressionando fãs de ficção científica</h2>
+                <div class="detalhe">
+                <span class="filme">Filme</span>
+                <span>13:40</span>
+                </div>
+            </article>
+
+            <article>
+                <img src="https://criticalhits.com.br/wp-content/uploads/2025/04/Jujutsu-Kaisen-Movie-Hidden-Inventory-Anime-696x392.jpg" alt="">
+                <h2>Arcane prova que animações também podem ser adultas e profundas</h2>
+                <div class="detalhe">
+                <span class="serie">Série</span>
+                <span>21:05</span>
+                </div>
+            </article>
+            </div>
+
+        </section>
+
+    </main>
